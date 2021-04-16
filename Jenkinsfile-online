@@ -10,10 +10,10 @@ pipeline {
     }
 
     environment {
-        DOCKER_CREDENTIAL_ID = 'dockerhub-id'
-        GITHUB_CREDENTIAL_ID = 'github-id'
-        KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
-        REGISTRY = 'hub.docker.com'
+        DOCKER_CREDENTIAL_ID = credentials('dockerhub-id')
+        GITHUB_CREDENTIAL_ID = credentials('github-id')
+        KUBECONFIG_CREDENTIAL_ID = credentials('demo-kubeconfig')
+        REGISTRY = 'docker.io'
         DOCKERHUB_NAMESPACE = 'batuhanertekin'
         GITHUB_ACCOUNT = 'BatuhanErtekin'
         APP_NAME = 'devops-java-sample'
